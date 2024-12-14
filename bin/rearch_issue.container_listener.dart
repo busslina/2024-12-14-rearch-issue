@@ -3,13 +3,13 @@ import 'package:rearch/rearch.dart';
 final container = CapsuleContainer();
 
 void main(List<String> arguments) {
-  print('Dart Issue -- Start');
+  print('Listener Issue -- Start');
 
   // ignore: unused_result
   container.listen((use) {
     final appState = use(appStateCapsule);
 
-    print('App state --> ${appState.value}');
+    print('Listener state --> ${appState.value}');
 
     Future.microtask(() {
       switch (appState.value) {
